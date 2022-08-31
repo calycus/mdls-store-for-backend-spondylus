@@ -12,7 +12,7 @@ export const getInfo = createSlice({
 
     reducers: {
         setInfoDataUserLogin: (state, action) => {
-            let data = action.payload
+            let data = action.payload.data
             state.userDataLogin = {}
             state.userDataLogin = {
                 cedula: data.id,
@@ -28,36 +28,45 @@ export const getInfo = createSlice({
             }))
 
             if (state.userDataLogin != null) {
-                window.location.href = "/home";
+                action.payload.history("/home")
             }
         },
     }
 })
 
-export const getDataUserLogin = (userName, userPassword) => async (dispatch) => {
-    console.log(api.headers);
-    try {
-        const res = await axios({
-            method: 'POST',
-            url: api.url + "/api/login",
-            headers: api.headers,
-            responseType: 'json',
-            data: {
+export const getDataUserLogin = (history, userName, userPassword) => async (dispatch) => {
+
+    axios.post(api.url + "/api/login", {
+        user: userName,
+        password: userPassword,
+    })
+        .then(res => {
+            let data = {
+                data: res.data,
+                history: history
+            }
+            dispatch(setInfoDataUserLogin(data))
+        })
+        .catch(error => {
+            console.log('There was an error!', error);
+        });
+
+    /* try {
+       
+         const responce = await fetch(api.url + "/api/login", {
+            method: "POST",
+            body: JSON.stringify({
                 user: userName,
                 password: userPassword,
-            }
+            })
         })
-        console.log(res)
+        const data = await responce.json() 
         dispatch(setInfoDataUserLogin(res.data.data))
-
-
+        
+        console.log(res);
     } catch (error) {
         console.log(error)
-        /*  dispatch({
-             type: EROR,
-             payload: res.data.data
-         }) */
-    }
+    } */
 }
 
 
