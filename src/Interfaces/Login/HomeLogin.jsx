@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Box } from '@mui/material';
 
-import './pageHomeLogin.css';
-import Login from './Login/Login';
+import './HomeLogin.css';
+import Login from './Components/Login';
 
 const PageHomeLogin = () => {
   return (

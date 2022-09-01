@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 import store from './Redux/store';
-import RotuerSwitch from './router/rotuerSwitch';
+import PageContainer from './Interfaces/Container/pageContainer';
 
 import './index.css';
 const theme = createTheme({
@@ -16,8 +16,15 @@ const theme = createTheme({
     secondary: {
       main: '#26A69A',
     },
+    background: {
+      main: '#ededed'
+    },
     loginButton: {
       main: '#1390CB',
+    },
+    logincolor: {
+      primary: 'rgb(26 41 124)',
+      secondary: 'rgb(28 37 87)',
     },
     negative: {
       main: '#C10015',
@@ -31,7 +38,7 @@ root.render(
     <Provider store={store}>
       <BrowserRouter>
 
-        <RotuerSwitch />
+        <PageContainer />
 
       </BrowserRouter>
     </Provider>

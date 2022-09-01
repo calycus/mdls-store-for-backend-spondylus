@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Box } from '@mui/material';
 
 import './App2.css';
-import Login from './Login/Login';
+import Login from './Login/Components/Login';
 
 const App2 = () => {
     return (

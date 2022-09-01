@@ -37,7 +37,7 @@ img {
 }
 
 .leftpan .background-img {
-  background-image: url("../../public/image/background-image.gif");
+  background-image: url("../../../public/image/background-image.gif");
 }
 
 .rightpan {
@@ -150,7 +150,7 @@ img {
   }
 
   .rightpan .background-img {
-    background-image: url("../../public/image/background-image.gif");
+    background-image: url("../../../public/image/background-image.gif");
     background-color: rgba(254, 254, 254, 0);
   }
 
