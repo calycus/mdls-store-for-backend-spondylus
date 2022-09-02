@@ -10,8 +10,8 @@ const AppBarPageContainer = ({ open, setOpen }) => {
     const theme = useTheme();
     return (
         <React.Fragment>
-            <AppBar position="fixed" open={open}>
-                <Toolbar style={{ backgroundColor: theme.palette.logincolor.primary }}>
+            <AppBar position="fixed" open={open} sx={{ color: "white" }}>
+                <Toolbar style={{ backgroundColor: theme.palette.primary.main }}>
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"

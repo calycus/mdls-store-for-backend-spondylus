@@ -13,7 +13,7 @@ import RotuerSwitchComponents from '../../router/routerSwitchComponent';
 import Roles from '../roles';
 import AppBarPageContainer from './Components/appBarPageContainer';
 import DrawerPageContainer from './Components/DrawerPageContainer';
-
+import DrawerHeaderComponent from './Components/DrawerHeaderComponent';
 //Css
 import './pageContainer.css'
 
@@ -23,6 +23,7 @@ const PageContainer = () => {
     const theme = useTheme();
     const location = useLocation();
     const roles = Roles();
+    const DrawerHeader = DrawerHeaderComponent()
     const [open, setOpen] = useState(false);
     const [openUser, setOpenUser] = useState(true);
     /* const userData = useSelector(selectUserDataLogin) */
@@ -35,7 +36,7 @@ const PageContainer = () => {
     return (
         <Box sx={{ display: 'flex' }}>
             <div style={{
-                'display': location.pathname === "/"
+                'display': (location.pathname === "/" || location.pathname === "/404_not_found")
                     ? 'none'
                     : 'flex',
             }}>
@@ -54,8 +55,20 @@ const PageContainer = () => {
 
 
             </div>
-            <Box component="main" sx={{ flexGrow: 1, p: 3, backgroundColor: theme.palette.background.main, height: "100%" }}>
-                <DrawerHeader />
+            <Box component="main"
+                sx={{
+                    backgroundColor: theme.palette.background.main,
+                    height: "100%",
+                    flexGrow: 1,
+                    'p': (location.pathname === "/" || location.pathname === "/404_not_found")
+                        ? 0
+                        : 3
+                }}>
+                <DrawerHeader style={{
+                    'display': (location.pathname === "/" || location.pathname === "/404_not_found")
+                        ? 'none'
+                        : 'flex'
+                }} />
                 <RotuerSwitchComponents />
             </Box>
         </Box >
@@ -65,14 +78,14 @@ const PageContainer = () => {
 export default PageContainer
 
 
-const DrawerHeader = styled('div')(({ theme }) => ({
+/* const DrawerHeader = styled('div')(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-end',
     padding: theme.spacing(0, 1),
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
-}));
+})); */
 
 
 
