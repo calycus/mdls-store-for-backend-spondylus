@@ -3,16 +3,25 @@ import { Box, Button } from "@mui/material";
 
 import './404_not_found.css'
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Error_404_Not_Found = () => {
-    const history = useNavigate()
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        setTimeout(() => {
+            document.querySelector('.cont_principal')
+                .className = "cont_principal cont_error_active";
+        }, 20)
+    });
+
     return (
-        <Box class="cont_principal">
-            <div class="cont_error">
+        <Box className="cont_principal">
+            <div className="cont_error">
                 <h2>404</h2>
                 <p>Oops!!, The page you are looking for does not exist.</p>
                 <Button
-                    onClick={() => history("/home")}
+                    onClick={() => navigate("/home")}
                     variant="outlined"
                     color="primary"
                     sx={{ fontWeight: "bolder" }}
@@ -20,15 +29,16 @@ const Error_404_Not_Found = () => {
                     Go to Home Page
                 </Button>
             </div>
-            <div class="cont_aura_1"></div>
-            <div class="cont_aura_2"></div>
+            <div className="cont_aura_1"></div>
+            <div className="cont_aura_2"></div>
         </Box>
     )
 }
 
 export default Error_404_Not_Found
 
-window.onload = function () {
+/* window.onload = function () {
+
     document.querySelector('.cont_principal').className = "cont_principal cont_error_active";
 
-}
+} */

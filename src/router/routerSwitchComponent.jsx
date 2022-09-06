@@ -1,4 +1,4 @@
-import { Route, Routes, useNavigate } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 
 //Login
 import PageHomeLogin from '../Pages/Login/HomeLogin'
@@ -11,7 +11,7 @@ import Error_404_Not_Found from '../404_not_found';
 import App2 from '../Pages/App2';
 
 const RotuerSwitchComponents = () => {
-    const history = useNavigate();
+    /*  const navigate = useNavigate(); */
 
     return (
         <Routes>
@@ -24,11 +24,12 @@ const RotuerSwitchComponents = () => {
             <Route path="/app" element={
                 <App2 />
             } />
-            {/* <Route path="*" element={
-                <Error_404_Not_Found />
-            } /> */}
+
             <Route path="/404_not_found" element={
                 <Error_404_Not_Found />
+            } />
+            <Route path="*" element={
+                <Navigate to={"/404_not_found"} />
             } />
 
         </Routes>

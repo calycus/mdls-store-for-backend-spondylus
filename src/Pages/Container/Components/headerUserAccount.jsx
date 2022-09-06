@@ -1,6 +1,5 @@
 import { Button, Avatar, Collapse, IconButton } from "@mui/material";
 import { ChevronLeft } from '@mui/icons-material';
-
 const HeaderUserAccount = ({ setOpenUser, openUser, setOpen, theme }) => {
     return (
         <div style={{ display: "flex", flexDirection: "column", width: "100%" }}>
