@@ -22,7 +22,7 @@ const HomePage = () => {
                             <div className='cardContainer' key={index}>
                                 <CardOpcion
                                     name={element.name}
-                                    function={element.function}
+                                    action={element.action}
                                 />
                             </div>)
                     })}

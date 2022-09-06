@@ -2,28 +2,34 @@ import { Button, Card, CardActions, CardContent, Typography } from '@mui/materia
 import * as React from 'react';
 
 const CardOpcion = (props) => {
-    return (
-        <Card sx={{ minWidth: 200, maxWidth: 200, maxHeight: 200 }}>
-            <CardContent>
-                <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                    Word of the Day
-                </Typography>
-                <Typography variant="h5" component="div">
-                </Typography>
-                <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                    adjective
-                </Typography>
-                <Typography variant="body2">
-                    well meaning and kindly.
-                    <br />
-                    {props.name}
-                </Typography>
-            </CardContent>
-            <CardActions style={{ display: "flex", justifyContent: "center" }}>
-                <Button size="small" >{props.function}</Button>
-            </CardActions>
-        </Card>
-    )
+    let img = ""
+
+    if (Object.keys(props).length != 0) {
+        img = ((Object.keys(props).length > 1)
+            ? (props.action + "_" + props.name.replace(/ /g, "_").replaceAll("/", ""))
+            : props.name.replace(/ /g, "_"))
+
+
+        return (
+            <Card>
+                <CardContent style={{ display: "flex", padding: "16px 10px 16px 10px" }}>
+                    <div style={{ display: "flex", width: "40%" }}>
+                        <img style={{ minWidth: '120px', maxWidth: '120px' }} src={'/image/administrador/' + img + '.gif'}></img>
+                    </div>
+                    <div className='textName'>
+                        <span style={{ paddingLeft: "0.5rem" }}>{props.name}</span>
+                        <span style={{ paddingLeft: "0.5rem" }}>{props.action}</span>
+                    </div>
+                </CardContent>
+                {/* <CardActions style={{ display: "flex", justifyContent: "center" }}>
+                    <Button size="small" >{props.action}</Button>
+                </CardActions> */}
+            </Card>
+        )
+    }
+
+
+
 }
 
 export default CardOpcion

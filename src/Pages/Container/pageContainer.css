@@ -4,28 +4,19 @@
     justify-content: end;
 }
 
-.homeCardContainer {
-    display: flex !important;
-    flex-wrap: wrap;
-    padding: 1rem 0rem;
-}
-
-.cardContainer {
-    padding: .5rem .5rem;
-}
-
 .drawerHeaderUserDataAcount {
     display: flex;
     flex-direction: column;
     padding-left: .5rem;
 }
-.drawerHeaderContainer{
+
+.drawerHeaderContainer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     -webkit-transition: none !important;
-    transition:none !important;
+    transition: none !important;
 }
 
 .userHeaderAccount {
@@ -39,6 +30,13 @@
     padding-left: .2rem;
     color: rgb(26 41 124);
 }
+
+/* .CollapseHeder {
+    height: auto !important;
+    overflow: visible !important;
+    -webkit-transition: height 3000ms cubic-bezier(0.4, 0, 0.2, 1) 0ms !important;
+    transition: height 3000ms cubic-bezier(0.4, 0, 0.2, 1) 0ms !important;
+} */
 
 .logoutButtonContainer {
     display: flex;

@@ -11,5 +11,25 @@
 }
 
 .cardContainer {
-    padding: .5rem .5rem;
+    min-width: 280px !important;
+    max-width: 280px !important;
+    max-height: 300px !important;
+    padding: .5rem .4rem;
+
+}
+
+.textName {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    font-size: 15px;
+}
+
+@media (min-width: 600px) {
+    .css-1oqqzyl-MuiContainer-root {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
 }

@@ -3,19 +3,19 @@ const Roles = () => {
     const cardOptionAdministrator = [
         {
             name: "Encargado",
-            function: "Add"
+            action: "Add"
         },
         {
             name: "Encargado",
-            function: "Update"
+            action: "Update"
         },
         {
             name: "Producto / Servicio",
-            function: "Add"
+            action: "Add"
         },
         {
             name: "Producto / Servicio",
-            function: "Update"
+            action: "Update"
         },
     ]
     const cardOptionManager = [
