@@ -53,3 +53,22 @@
     -webkit-transition: none !important;
     transition: none !important;
 } */
+
+
+@media (max-height: 900px) {
+    .css-1sywsns {
+        height: 100% !important;
+    }
+}
+
+@media (min-width: 600px) {
+    .css-hyum1k-MuiToolbar-root {
+        min-height: 55px !important;
+    }
+}
+
+@media (min-width: 600px) {
+    .css-1r9jet7 {
+        min-height: 55px !important;
+    }
+}

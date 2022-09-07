@@ -7,7 +7,8 @@
 .homeCardContainer {
     display: flex !important;
     flex-wrap: wrap;
-    padding: 1rem 0rem;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
 }
 
 .cardContainer {
@@ -16,6 +17,14 @@
     max-height: 300px !important;
     padding: .5rem .4rem;
 
+}
+
+.cardOptionContent {
+    display: flex;
+    padding: 16px 10px 16px 10px !important;
+    border-right: ridge;
+    border-bottom: ridge;
+    border-radius: 10px;
 }
 
 .imgDimension {
@@ -31,7 +40,7 @@
     align-items: center;
     justify-content: center;
     width: 60%;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 @media (min-width: 600px) {

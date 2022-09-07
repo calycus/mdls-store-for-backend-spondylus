@@ -58,7 +58,7 @@ const PageContainer = () => {
             <Box component="main"
                 sx={{
                     backgroundColor: theme.palette.background.main,
-                    height: "100%",
+                    height: "100vh",
                     flexGrow: 1,
                     'p': (location.pathname === "/" || location.pathname === "/404_not_found")
                         ? 0
@@ -76,17 +76,6 @@ const PageContainer = () => {
 }
 
 export default PageContainer
-
-
-/* const DrawerHeader = styled('div')(({ theme }) => ({
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-    padding: theme.spacing(0, 1),
-    // necessary for content to be below app bar
-    ...theme.mixins.toolbar,
-})); */
-
 
 
 

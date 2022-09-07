@@ -46,10 +46,26 @@ const Roles = () => {
     ]
 
     const cardOptionAccounting = [
-        { name: "Lista de Facturas" },
-        { name: "Gráfico Contable" },
-        { name: "Cuentas Bancarias" },
-        { name: "Transacciones" }
+        {
+            name: "Lista de Facturas",
+            action: "To List",
+            rol: "Accounting"
+        },
+        {
+            name: "Gráfico Contable",
+            action: "Graphic",
+            rol: "Accounting"
+        },
+        {
+            name: "Cuentas Bancarias",
+            action: "Bankbook",
+            rol: "Accounting"
+        },
+        {
+            name: "Transacciones",
+            action: "Dealings",
+            rol: "Accounting"
+        }
     ]
 
     const cardOptionForMedicine = [

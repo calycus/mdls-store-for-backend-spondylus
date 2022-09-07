@@ -14,8 +14,12 @@ const HomePage = () => {
 
     return (
         <Box>
-            <Container style={{ display: "flex", flexDirection: "column" }}>
-                <span>Administrador</span>
+            <Container style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+
+                <span style={{ paddingInlineStart: "2rem", alignSelf: "start" }}>
+                    Administrador
+                </span>
+
                 <div className="homeCardContainer">
                     {roles.cardOptionAdministrator.map((element, index) => {
                         return (
@@ -30,8 +34,10 @@ const HomePage = () => {
                 </div>
 
             </Container>
-            <Container style={{ display: "flex", flexDirection: "column" }}>
-                <span>Encargado</span>
+            <Container style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                <span style={{ paddingInlineStart: "2rem", alignSelf: "start" }}>
+                    Encargado
+                </span>
                 <div className="homeCardContainer">
                     {roles.cardOptionManager.map((element, index) => {
                         return (
@@ -46,8 +52,10 @@ const HomePage = () => {
                 </div>
 
             </Container>
-            {/* <Container style={{ display: "flex", flexDirection: "column" }}>
-                <span>Contabilidad</span>
+            <Container style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                <span style={{ paddingInlineStart: "2rem", alignSelf: "start" }}>
+                    Contabilidad
+                </span>
                 <div className="homeCardContainer">
                     {roles.cardOptionAccounting.map((element, index) => {
                         return (
@@ -55,12 +63,13 @@ const HomePage = () => {
                                 <CardOpcion
                                     name={element.name}
                                     action={element.action}
+                                    rol={element.rol}
                                 />
                             </div>)
                     })}
                 </div>
 
-            </Container> */}
+            </Container>
         </Box >
     )
 }

@@ -8,15 +8,16 @@ const CardOpcion = (props) => {
 
     if (Object.keys(props).length != 0) {
         nameImg = ((Object.keys(props).length > 1)
-            ? (props.action + "_" + props.name.replace(/ /g, "_").replaceAll("/", ""))
-            : props.name.replace(/ /g, "_"))
+            ? (props.action + "_" + props.name)
+            : props.name).replace(/ /g, "_").replaceAll("/", "").normalize("NFD").replace(/[\u0300-\u036f]/g, "")
 
         return (
             <Card
+                sx={{ borderRadius: "10px" }}
                 onMouseEnter={() => animar(nameImg)}
                 onMouseLeave={() => restaurar(nameImg)}
             >
-                <CardContent style={{ display: "flex", padding: "16px 10px 16px 10px" }}>
+                <CardContent className='cardOptionContent'>
                     <div style={{ display: "flex", width: "40%" }}>
                         <img
                             id={nameImg}
