@@ -23,6 +23,7 @@ const HomePage = () => {
                                 <CardOpcion
                                     name={element.name}
                                     action={element.action}
+                                    rol={element.rol}
                                 />
                             </div>)
                     })}
@@ -37,13 +38,15 @@ const HomePage = () => {
                             <div className='cardContainer' key={index}>
                                 <CardOpcion
                                     name={element.name}
+                                    action={element.action}
+                                    rol={element.rol}
                                 />
                             </div>)
                     })}
                 </div>
 
             </Container>
-            <Container style={{ display: "flex", flexDirection: "column" }}>
+            {/* <Container style={{ display: "flex", flexDirection: "column" }}>
                 <span>Contabilidad</span>
                 <div className="homeCardContainer">
                     {roles.cardOptionAccounting.map((element, index) => {
@@ -51,12 +54,13 @@ const HomePage = () => {
                             <div className='cardContainer' key={index}>
                                 <CardOpcion
                                     name={element.name}
+                                    action={element.action}
                                 />
                             </div>)
                     })}
                 </div>
 
-            </Container>
+            </Container> */}
         </Box >
     )
 }

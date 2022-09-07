@@ -3,26 +3,46 @@ const Roles = () => {
     const cardOptionAdministrator = [
         {
             name: "Encargado",
-            action: "Add"
+            action: "Add",
+            rol: "Admin"
         },
         {
             name: "Encargado",
-            action: "Update"
+            action: "Update",
+            rol: "Admin"
         },
         {
             name: "Producto / Servicio",
-            action: "Add"
+            action: "Add",
+            rol: "Admin"
         },
         {
             name: "Producto / Servicio",
-            action: "Update"
+            action: "Update",
+            rol: "Admin"
         },
     ]
     const cardOptionManager = [
-        { name: "Nuevo Cliente" },
-        { name: "Nueva Factura" },
-        { name: "Buscar Factura" },
-        { name: "Buscar Producto/Servicio" }
+        {
+            name: "Nuevo Cliente",
+            action: "Add",
+            rol: "Manager"
+        },
+        {
+            name: "Nueva Factura",
+            action: "Generate",
+            rol: "Manager"
+        },
+        {
+            name: "Buscar Factura",
+            action: "Search",
+            rol: "Manager"
+        },
+        {
+            name: "Producto / Servicio",
+            action: "Search",
+            rol: "Manager"
+        },
     ]
 
     const cardOptionAccounting = [

@@ -18,6 +18,13 @@
 
 }
 
+.imgDimension {
+    min-width: 95px;
+    max-width: 110px;
+    min-height: 101px;
+    max-height: 110px;
+}
+
 .textName {
     display: flex;
     flex-direction: column;
